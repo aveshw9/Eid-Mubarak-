@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Eid Mubarak </title>
+    <!-- Google Fonts for premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Premium Theme CSS --- */
+        :root {
+            --dark-bg: #0a192f; /* Deep Navy Blue */
+            --light-bg: #172a45; /* Lighter Navy for Card */
+            --primary-gold: #FFD700; /* Bright Gold */
+            --text-light: #ccd6f6; /* Light text color */
+            --text-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden; /* To hide scrollbars from stars */
+            position: relative;
+        }
+
+        /* --- Animated Starry Background --- */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="rgba(255,255,255,0.1)"/><circle cx="2" cy="2" r="0.5" fill="rgba(255,255,255,0.3)"/></svg>');
+            animation: animateStars 50s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes animateStars {
+            from { background-position: 0 0; }
+            to { background-position: 0 400px; }
+        }
+
+        /* --- Greeting Card Container --- */
+        .card {
+            background-color: var(--light-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-gold);
+            text-align: center;
+            padding: 30px 35px;
+            max-width: 420px;
+            width: 100%;
+            border: 1px solid var(--primary-gold);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Image Styling --- */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 2px solid var(--primary-gold);
+        }
+
+        /* --- Heading "EID Mubarak" --- */
+        .card h1 {
+            font-family: 'Great Vibes', cursive;
+            color: var(--primary-gold);
+            font-size: 4.5rem; /* Larger, elegant font */
+            margin: 0;
+            font-weight: 500;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+        
+        .card p {
+            font-size: 0.9rem;
+            margin: 10px 0 25px 0;
+            color: var(--text-light);
+        }
+
+        /* --- Name Input Box --- */
+        #nameInput {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--text-light);
+            padding: 12px 0;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: var(--text-white);
+            transition: border-color 0.3s ease;
+        }
+
+        #nameInput::placeholder {
+            color: rgba(204, 214, 246, 0.5);
+        }
+
+        #nameInput:focus {
+            outline: none;
+            border-bottom-color: var(--primary-gold);
+        }
+
+        /* --- WhatsApp Share Button --- */
+        #whatsappButton {
+            background-color: var(--primary-gold);
+            color: var(--dark-bg);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
+        }
+        
+        #whatsappButton:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        #whatsappButton svg {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="card">
+        <!-- Yahan aapki image aayegi -->
+        <img src="EID.png" alt="Eid Mubarak Image">
+<div class="ad-contain ">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'a1d8ae4d9d2a3d1fb7859ff5d67f7873',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/a1d8ae4d9d2a3d1fb7859ff5d67f7873/invoke.js"></script>
+        
+        <!-- Heading -->
+        <h1>Eid Mubarak</h1>
+        <p>Wishing you and your family a blessed Eid filled with happiness, peace, and prosperity.</p>
+        
+        <!-- Naam likhne ka box -->
+        <input type="text" id="nameInput" placeholder="Yahan Apna Naam Likhein">
+        
+        <!-- WhatsApp Share Button -->
+        <button id="whatsappButton">
+            <!-- WhatsApp SVG Icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.13.43.2.5.25.13.06.16.21.05.33-.11.12-.24.18-.38.21l-.11.03c-.28.06-1.01.37-1.12.41-.1.04-.41.16-.6.33-.19.18-.36.37-.52.56-.16.19-.3.35-.41.43-.11.08-.23.16-.38.21-.15.05-.3.06-.46.03-.16-.03-.43-.11-.96-.33-1.24-.51-2.22-1.23-2.99-2.01-.84-.85-1.48-1.85-1.88-2.88-.1-.28-.2-.59-.2-.88a1.18 1.18 0 0 1 .11-.53c.08-.18.19-.34.33-.46.14-.12.28-.21.43-.28.15-.07.28-.1.39-.1.11 0 .23.01.33.03.1.02.16.05.21.08.05.03.1.08.16.16.06.08.1.18.15.3l.11.33c.04.13.06.26.06.38 0 .13-.03.25-.08.36-.05.11-.13.23-.23.36l-.23.28c-.08.1-.12.18-.12.26 0 .08.01.16.05.23.04.08.17.33.5.76.5.65.94 1.1 1.21 1.3.27.2.5.33.68.43.18.1.33.15.46.16.13.01.25,0 .36-.03.1-.03.2-.09.28-.18.08-.08.15-.18.2-.3.05-.11.1-.23.15-.35s.1-.25.15-.38c.05-.13.1-.23.16-.31.06-.08.15-.13.25-.16.1-.03.2-.05.3-.05s.2.01.28.05c.08.04.15.08.2.13.05.05.1.1.13.16.03.06.05.13.05.2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            Share on WhatsApp
+        </button>
+<div class="ad-contain ">
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ca42afc25a207d75dd1aca5982adfcaa',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/ca42afc25a207d75dd1aca5982adfcaa/invoke.js"></script>
+    </div>
+
+    <script>
+        // Button aur Input ko select karna
+        const nameInput = document.getElementById('nameInput');
+        const whatsappButton = document.getElementById('whatsappButton');
+
+        // Button par click karne se kya hoga, woh yahan likha hai
+        whatsappButton.addEventListener('click', function() {
+            // Input box se naam lena aur faltu space hatana
+            const senderName = nameInput.value.trim();
+
+            // Check karna ki naam likha hai ya nahi
+            if (senderName === '') {
+                alert('Share karne se pehle kripya apna naam likhein!');
+                return; // Function ko yahin rok dena
+            }
+
+            // WhatsApp par bhejne wala message
+            const message = `🌙✨ *Eid Mubarak!* ✨🌙\n\nAapko aur aapke poore parivaar ko meri taraf se Eid ki dheron khushiyan naseeb hon.\n\nFrom,\n*${senderName}*`;
+            
+            // Message ko URL-friendly banana
+            const encodedMessage = encodeURIComponent(message);
+            
+            // WhatsApp ka share link banana
+            const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+            
+            // Link ko naye tab mein kholna
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+
+</body>
+</html>
