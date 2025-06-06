@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- Premium Theme CSS --- */
         :root {
             --dark-bg: #0a192f;
             --light-bg: #172a45;
@@ -19,31 +18,27 @@
             --text-white: #ffffff;
         }
 
-        /* === BODY CSS MEIN BADLAV KIYA GAYA HAI === */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-light);
-            display: flex; /* Flexbox rakha gaya hai */
-            justify-content: center; /* Card ko horizontally center karne ke liye */
-            /* align-items: center; hata diya gaya hai taaki content upar se shuru ho */
+            display: flex;
+            justify-content: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            /* overflow: hidden; hata diya gaya hai taaki page scroll ho sake */
             position: relative;
         }
 
-        /* === STARS BACKGROUND KO BEHTAR BANAYA GAYA HAI === */
         .stars {
-            position: fixed; /* 'absolute' se 'fixed' kiya gaya hai */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="rgba(255,255,255,0.1)"/><circle cx="2" cy="2" r="0.5" fill="rgba(255,255,255,0.3)"/></svg>');
             animation: animateStars 50s linear infinite;
-            z-index: -1; /* Background ko sabse peeche bhejne ke liye */
+            z-index: -1;
         }
 
         @keyframes animateStars {
@@ -51,7 +46,6 @@
             to { background-position: 0 400px; }
         }
 
-        /* --- Greeting Card Container --- */
         .card {
             background-color: var(--light-bg);
             border-radius: 20px;
@@ -64,7 +58,7 @@
             position: relative;
             z-index: 1;
             animation: fadeIn 1s ease-out;
-            margin: auto 0; /* Card ko vertically center karne mein madad karega jab content chhota ho */
+            margin: auto 0;
         }
 
         @keyframes fadeIn {
@@ -72,7 +66,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Baaki ka CSS jaisa tha waisa hi hai */
         .card img {
             max-width: 100%;
             height: auto;
@@ -92,8 +85,20 @@
         
         .card p {
             font-size: 0.9rem;
-            margin: 10px 0 25px 0;
+            margin: 10px 0 15px 0;
             color: var(--text-light);
+        }
+
+        /* === (CSS BADLAV) NAYE ELEMENT KE LIYE STYLE === */
+        #senderNameDisplay {
+            color: var(--primary-gold);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            min-height: 25px; /* Thodi jagah rakhega, bhale hi naam na ho */
+        }
+        #senderNameDisplay strong {
+            font-weight: 600;
+            color: var(--text-white);
         }
 
         #nameInput {
@@ -152,21 +157,25 @@
 
     <div class="card">
         <img src="EID.png" alt="Eid Mubarak Image">
-        <div class="ad-contain ">
+        <div class="ad-contain">
             <script type="text/javascript">
-                atOptions = {
-                    'key' : 'a1d8ae4d9d2a3d1fb7859ff5d67f7873',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/a1d8ae4d9d2a3d1fb7859ff5d67f7873/invoke.js"></script>
+	atOptions = {
+		'key' : 'a1d8ae4d9d2a3d1fb7859ff5d67f7873',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/a1d8ae4d9d2a3d1fb7859ff5d67f7873/invoke.js"></script>
+        
         </div>
         
         <h1>Eid Mubarak</h1>
         <p>Wishing you and your family a blessed Eid filled with happiness, peace, and prosperity.</p>
+        
+        <!-- === (HTML BADLAV) YAHAN BHEJNE WALE KA NAAM DIKHEGA === -->
+        <div id="senderNameDisplay"></div>
         
         <input type="text" id="nameInput" placeholder="Yahan Apna Naam Likhein">
         
@@ -175,33 +184,58 @@
             Share on WhatsApp
         </button>
         <div class="ad-contain ">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : 'ca42afc25a207d75dd1aca5982adfcaa',
-                    'format' : 'iframe',
-                    'height' : 60,
-                    'width' : 468,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/ca42afc25a207d75dd1aca5982adfcaa/invoke.js"></script>
-        </div>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ca42afc25a207d75dd1aca5982adfcaa',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+  </script>
+<script type="text/javascript" src="//www.highperformanceformat.com/ca42afc25a207d75dd1aca5982adfcaa/invoke.js"></script>
     </div>
 
+    <!-- === JAVASCRIPT MEIN BADLAV KIYA GAYA HAI === -->
     <script>
         const nameInput = document.getElementById('nameInput');
         const whatsappButton = document.getElementById('whatsappButton');
+        const senderNameDisplay = document.getElementById('senderNameDisplay');
 
+        // BHAG 1: Jab page load hoga, to yeh code chalega
+        // Yeh check karega ki link mein naam hai ya nahi
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('from')) {
+                const name = decodeURIComponent(urlParams.get('from'));
+                // Agar naam hai, to use page par dikha do
+                if (name) {
+                    senderNameDisplay.innerHTML = `From: <strong>${name}</strong>`;
+                }
+            }
+        });
+
+        // BHAG 2: Jab "Share on WhatsApp" button click hoga
         whatsappButton.addEventListener('click', function() {
             const senderName = nameInput.value.trim();
+
             if (senderName === '') {
                 alert('Share karne se pehle kripya apna naam likhein!');
                 return;
             }
-            const pageUrl = window.location.href;
-            const message = `🌙✨ *${senderName}* ne aapko Eid ki Mubarakbaad bheji hai! ✨🌙\n\nKhaas aapke liye banaya gaya yeh greeting card dekhne ke liye neeche diye gaye link par click karein 👇\n\n${pageUrl}`;
+
+            // Page ka URL bina kisi parameter ke prapt karein
+            const baseUrl = window.location.origin + window.location.pathname;
+            
+            // Naya URL banayein jismein naam shamil ho (e.g., .../page.html?from=Rohan)
+            const pageUrlWithname = `${baseUrl}?from=${encodeURIComponent(senderName)}`;
+
+            // Naya WhatsApp message banayein jismein naya link ho
+            const message = `🌙✨ *${senderName}* ne aapko Eid ki Mubarakbaad bheji hai! ✨🌙\n\nKhaas aapke liye banaya gaya yeh greeting card dekhne ke liye neeche diye gaye link par click karein 👇\n\n${pageUrlWithname}`;
+            
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+            
             window.open(whatsappUrl, '_blank');
         });
     </script>
